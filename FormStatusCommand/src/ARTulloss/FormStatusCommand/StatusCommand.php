@@ -12,6 +12,7 @@ namespace ARTulloss\FormStatusCommand;
 
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\CommandSender;
+use pocketmine\permission\DefaultPermissions;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
@@ -28,6 +29,7 @@ class StatusCommand extends BaseCommand{
      */
     public function __construct(string $name, Plugin $owner) {
         parent::__construct($name, $owner);
+        $this->setPermission(DefaultPermissions::ROOT . '.command.status');
         $this->setUsage('%pocketmine.command.status.usage');
         $this->setDescription('%pocketmine.command.status.description');
     }
