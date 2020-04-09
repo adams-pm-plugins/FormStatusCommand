@@ -12,20 +12,9 @@ namespace ARTulloss\FormStatusCommand;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
 use pocketmine\command\PluginCommand;
-use pocketmine\permission\DefaultPermissions;
 use pocketmine\Player;
-use pocketmine\plugin\Plugin;
 
 abstract class BaseCommand extends PluginCommand{
-    /**
-     * BaseCommand constructor.
-     * @param string $name
-     * @param Plugin $owner
-     */
-    public function __construct(string $name, Plugin $owner) {
-        parent::__construct($name, $owner);
-        $this->setPermission(DefaultPermissions::ROOT . '.command.status');
-    }
     /**
      * @param CommandSender $sender
      * @param string $commandLabel
